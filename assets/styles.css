@@ -1,0 +1,87 @@
+@font-face{
+    font-family: "Gotham Bold";
+    src: url("./fonts/GothamBold.ttf");
+}
+
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('./fonts/SourceSansPro-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("./fonts/Montserrat-Regular.ttf");
+}
+
+body{
+    font-family: "Source Sans Pro";
+    background-color: #F5F0BB;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Gotham Bold";
+}
+
+article{
+    margin: 50px 0;
+}
+
+article img{
+    width: 70%;
+}
+
+#not-found-img{
+    width: 40%;
+}
+
+.card{
+    margin: 10px;
+}
+
+.rounded-custom{
+    border-radius: 20px;
+}
+
+.with-bg-darkgreen{
+    background-color: #6D8B74;
+    color: #F9F9F9;
+}
+
+.btn-cream-custom{
+    background-color: #F5F0BB;
+    color: black;
+}
+
+.btn-cream-custom:hover{
+    background-color: #FFFDDE;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-cream-custom:active{
+    background-color: #6D8B74;
+    color: black;
+}
+
+.text-align-custom{
+    text-align: left;
+}
+
+a {
+    color: #F5F0BB;
+}
+
+@media screen and (max-width: 800px){
+    article img{
+        width: 80%;
+    }
+
+    .text-align-custom{
+        text-align: center;
+    }
+
+    #not-found-img{
+        width: 80%;
+    }
+}
+

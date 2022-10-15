@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotigo!</title>
+</head>
+<body>
+
+    <header class="sticky-top"></header>
+
+    <main class="container-fluid">
+        <article class="row container mx-auto">
+            <div class="col-md text-center img-placeholder"></div>
+            <div class="col-md my-auto text-align-custom">
+                <h3>Spotigo!</h3>
+                <p>Find your favorite artists and songs!
+                    On this website you will be directed to the largest music platform in the world.</p>
+            </div>
+        </article>
+
+        <article class="row with-bg-darkgreen">
+            <div class="container p-4">
+                <h3>Search your favourite artist!</h3>
+                <search-bar 
+                placeholder="Search artist name..." 
+                width="50" 
+                color="#F5F0BB"
+                aim="searchArtist"></search-bar>
+                <div class="row my-2" id="searchArtistResult"></div>
+            </div>
+        </article>
+
+        <article class="container">
+            <section class="row">
+                <div class="col-md text-center my-4 img-placeholder"></div>
+                <div class="col-md my-auto text-align-custom">
+                    <h3>Find your favourite songs now!</h3>
+                    <p>Find a song from your favorite artist, then you can visit the song you've chosen!</p>
+                    <search-bar 
+                    placeholder="Search track..." 
+                    width=100 
+                    color="#6D8B74"
+                    aim="searchTrack"></search-bar>
+                </div>
+            </section>
+            <track-list></track-list>
+            <section class="container p-4 row mx-auto my-4 text-align-custom">
+                <div class="col-lg my-4 img-placeholder"></div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer text-center with-bg-darkgreen p-4 text-light">
+        <p>© 2022 Spotigo! All rights reserved.</p>
+        <a href="https://developer.spotify.com/">Powered by Spotify</a>
+    </footer>
+</body>
+</html>
