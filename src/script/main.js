@@ -46,14 +46,14 @@ const main = () => {
     };
 
     $.ajax(options)
-      .done(function (data) {
+      .done((data) => {
         if (data.artists.items.length) {
           renderResultArtist(data.artists.items);
         } else {
           fallbackResultArtist();
         }
       })
-      .fail(async function () {
+      .fail(async () => {
         const artistPlaceholder = $("#searchArtistResult");
         errorInternal(artistPlaceholder);
       });
@@ -117,7 +117,7 @@ const main = () => {
     };
 
     $.ajax(options)
-      .done(async function (data) {
+      .done(async (data) => {
         if (data.artists.items.length) {
           const id = data.artists.items[0].id;
           $.ajax({
@@ -129,10 +129,10 @@ const main = () => {
             headers: {
               Authorization: `Bearer ${await getAccessToken()}`,
             },
-            success: function (data) {
+            success: (data) => {
               renderResultTrack(data.tracks);
             },
-            error: function () {
+            error: () => {
               fallbackResultTrack();
             },
           });
@@ -140,7 +140,7 @@ const main = () => {
           fallbackResultTrack();
         }
       })
-      .fail(function () {
+      .fail(() => {
         const trackPlaceholder = $("track-list");
         errorInternal(trackPlaceholder);
       });
